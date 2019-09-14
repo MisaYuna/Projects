@@ -1,0 +1,42 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    printf("let's create a pyramid. ¿Which height do you want it?\n");
+    {
+       //Asking for the height of the pyramid to the user
+        int Height;
+        do
+            {
+                Height = get_int("Number: \n");
+            }
+            while (Height < 0 || Height >8);
+            printf("OK, %i steps\n", Height);
+            {
+                //creating the pyramid
+                for (int rows = 0; rows < Height; rows++)
+                {
+                    for (int spaces = Height - rows; spaces > 0; spaces--)
+                    {
+                        printf(" ");
+                    }
+                    for (int pad = -1; pad < rows; pad++)
+                       {
+                           printf("#");
+                       }
+                    for (int spaces = 0; spaces > 0; spaces--)
+                    {
+                        printf(" ");
+                    }
+                    for (int pad = -1; pad < rows; pad++)
+                       {
+                           printf("#");
+                       }
+                       //After the number of spaces and pads are inserted, print a new line
+                       printf("\n");
+                }
+              
+            }
+    }
+}
