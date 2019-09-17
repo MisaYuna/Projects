@@ -1,0 +1,32 @@
+#include <math.h>
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    printf("let's create an algorithm to minimize cash coins\n");
+    {
+        //Asking for the amount of change that it is necessary
+        float cash;
+        do
+        {
+            cash = get_float("What is the amount of cash?\n");
+        }
+            while (cash < 0);
+            printf("Ok, will be %f\n", cash);
+        {
+            //Creating the alghorithm
+            int cents = round(cash * 100);
+            int n = cents;
+            int coins = 0;
+            while(n >= quarter; n - quarter; coins++)
+            while(n >= dime; n - dime; coins++)
+            while(n >= nickel; n - nickel; coins++)
+            while(n >= penny; n - penny; coins++)
+            
+            {
+                printf("It is necesary %i coins\n", coins);
+            }
+        }
+    } 
+}
